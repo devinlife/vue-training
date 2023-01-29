@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="['btn', sizeClass, colorClass]"
+    :class="['btn', sizeClass, colorClass, effectClass]"
     :disabled="!clickable"
     @click="handleClick"
   >
@@ -20,6 +20,10 @@ export default {
     color: {
       type: String,
       default: "primary",
+    },
+    effect: {
+      type: String,
+      default: "",
     },
     clickable: {
       type: Boolean,
@@ -49,6 +53,9 @@ export default {
     },
     sizeClass() {
       return `btn-${this.size}`;
+    },
+    effectClass() {
+      return `btn-${this.effect}`;
     },
   },
   methods: {},
