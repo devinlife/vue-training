@@ -27,23 +27,15 @@ export default {
         { name: "default index", width: "10%" },
         { name: "name", width: "20%" },
         { name: "age", width: "10%" },
-        {
-          name: "height",
-          width: "10%",
-          button: { name: "edit", type: "success" },
-        },
+        { name: "height", width: "10%" },
         { name: "address", width: "40%" },
-        {
-          name: "car",
-          width: "10%",
-          button: { name: "delete", type: "success" },
-        },
+        { name: "car", width: "10%" },
       ],
       people: [
         {
           name: "John",
-          age: 25,
-          height: "6ft",
+          age: { type: "input", description: { value: 25, type: "text" } },
+          height: { type: "button", description: { name: "edit", type: "success" } },
           address: "seoul jamsil",
         },
         {
@@ -51,12 +43,14 @@ export default {
           age: 32,
           height: "5ft 8in",
           address: "seoul",
+          car: { type: "button", description: { name: "delete", type: "success" } },
         },
         {
           name: "Jane",
           age: 20,
           height: "5ft 5in",
           address: "seoul",
+          car: { type: "button", description: { name: "delete", type: "success" } },
         },
       ],
     };
