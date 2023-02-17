@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import Error from "@/views/Error.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +9,11 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/error",
+      name: "Error",
+      component: Error,
     },
     {
       path: "/about",
@@ -41,6 +47,11 @@ const router = createRouter({
       path: "/test-family",
       name: "test-family",
       component: () => import("../views/TestFamily.vue"),
+    },
+    {
+      path: "/test-error",
+      name: "test-error",
+      component: () => import("../views/TestError.vue"),
     },
   ],
 });

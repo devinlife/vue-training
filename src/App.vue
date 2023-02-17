@@ -23,6 +23,7 @@ import HelloWorld from "./components/HelloWorld.vue";
         <RouterLink to="/test-state">Test State</RouterLink>
         <RouterLink to="/test-collection">Test Collection</RouterLink>
         <RouterLink to="/test-family">Test Family</RouterLink>
+        <RouterLink to="/test-error">Test Error</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
